@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most common event</title>
+</head>
+
+<body>
+    <p id="text"></p>
+    <input id="name-field" type="text">
+    <button id="update-name">Update</button>
+    <button onclick="makeBlueButton()">Click1</button>
+    <button id="direct-method">Click2</button>
+    <script>
+        //using function
+        const makeBlue = document.getElementById('text');
+        function makeBlueButton() {
+            makeBlue.innerText = 'this is awesome web';
+        }
+        // direct method
+        document.getElementById('direct-method').addEventListener('click', function () {
+            const makeClick = document.getElementById('text');
+            makeClick.innerText = 'This is another way to display';
+        })
+        document.getElementById('update-name').addEventListener('click', function () {
+            const updated = document.getElementById('name-field');
+            const makeClick = document.getElementById('text');
+            makeClick.innerText = updated.value;
+            updated.value = '';
+        })
+    </script>
+</body>
+
+
+</html>

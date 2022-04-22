@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <p id="text"></p>
+        <input id="follow-filled" type="text">
+        <button id="follower-name">update</button>
+
+        <button onclick="elementName()">Click me</button>
+        <button id="name">Click me</button>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        const element = document.getElementById('text');
+        function elementName() {
+            element.innerText = 'hello';
+        }
+        document.getElementById('name').addEventListener('click', function () {
+            const number = document.getElementById('text');
+            number.innerText = 'hi';
+        })
+        document.getElementById('follower-name').addEventListener('click', function () {
+            const myFollower = document.getElementById('follow-filled');
+            const follower = document.getElementById('text');
+            follower.innerText = myFollower.value;
+            myFollower.value = '';
+        })
+    </script>
+</body>
+
+</html>

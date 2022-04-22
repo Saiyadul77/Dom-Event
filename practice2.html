@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <p id="paragraph"></p>
+        <input id="update-filled" type="text">
+        <button id="update-name">update</button>
+        <button onclick="clickvariable()">Click Me</button>
+        <button id="friend">Click Me</button>
+    </main>
+    <script>
+        document.getElementById('update-name').addEventListener('click', function () {
+            const updateFilled = document.getElementById('update-filled');
+            const name = document.getElementById('paragraph');
+            name.innerText = updateFilled.value;
+            updateFilled.value = '';
+        })
+        const clickStatus = document.getElementById('paragraph');
+        function clickvariable() {
+            clickStatus.innerText = 'My name is Saiyadul';
+        }
+        document.getElementById('friend').addEventListener('click', function () {
+            const friendName = document.getElementById('paragraph');
+            friendName.innerText = 'My sons name is Md. Asadul Amin Akhand';
+        })
+
+    </script>
+</body>
+
+</html>
